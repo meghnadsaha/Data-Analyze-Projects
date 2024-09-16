@@ -2,7 +2,7 @@
 **House Price Prediction Using Regression Models**
 
 ### Kaggle Dataset Link:
-[Kaggle House Prices Dataset](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
+[Kaggle House Prices Dataset](https://www.kaggle.com/datasets/harlfoxem/housesalesprediction)
 
 ---
 
