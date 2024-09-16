@@ -526,3 +526,70 @@ export default CustomerSegmentationApp;
 6. **ClusterInsights**: Provides insights into which clusters to target for marketing strategies.
 
 This complete solution helps manage customer segmentation using KMeans clustering with React, including preprocessing, sending data, fetching clusters, and visualizing the results. Let me know if you need further details or adjustments!
+
+
+
+To test the Node.js API using `curl`, you can make a POST request to the `/api/kmeans-cluster` endpoint. Here’s how you can use `curl` to send the number of clusters and receive the clustering results.
+
+### Step 1: Start your Node.js backend server
+
+Make sure your server is running by executing:
+
+```bash
+node server.js
+```
+
+The server should be listening on `http://localhost:5000`.
+
+### Step 2: Use `curl` to send a POST request
+
+You can use the following `curl` command to send the request to your server:
+
+```bash
+curl -X POST http://localhost:5000/api/kmeans-cluster \
+-H "Content-Type: application/json" \
+-d '{"numClusters": 3}'
+```
+
+### Explanation:
+- `-X POST`: Specifies that this is a POST request.
+- `http://localhost:5000/api/kmeans-cluster`: The API endpoint you're calling.
+- `-H "Content-Type: application/json"`: Specifies the content type as JSON.
+- `-d '{"numClusters": 3}'`: Sends the data with `numClusters` as 3, which defines the number of clusters for KMeans.
+
+### Step 3: View the Response
+
+After running the `curl` command, the server should respond with the clustered customer data, similar to:
+
+```json
+[
+  {
+    "CustomerID": "1",
+    "age": 19,
+    "gender": 1,
+    "annualIncome": 15,
+    "spendingScore": 39,
+    "cluster": 1
+  },
+  {
+    "CustomerID": "2",
+    "age": 21,
+    "gender": 0,
+    "annualIncome": 15,
+    "spendingScore": 81,
+    "cluster": 2
+  },
+  {
+    "CustomerID": "3",
+    "age": 20,
+    "gender": 1,
+    "annualIncome": 16,
+    "spendingScore": 6,
+    "cluster": 1
+  }
+]
+```
+
+The API returns a JSON array with customer details and their respective cluster assignments.
+
+Let me know if you need any further clarifications or additional features with `curl`!
