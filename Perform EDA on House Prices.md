@@ -1,5 +1,5 @@
 Here are some common problems you may face when working with the Housing Prices dataset in React-based applications, along with possible solutions:
-
+https://www.kaggle.com/datasets/yasserh/housing-prices-dataset/data
 ### 1. **Handling Data Cleanup**:
    - **Problem**: Data cleaning is a crucial step before building regression models. Missing or incorrect values in features like `area`, `price`, `bedrooms`, etc., can lead to inaccurate predictions.
      - **React Challenge**: Managing data cleanup on the frontend can be tricky as React is primarily a UI library, and handling complex data cleaning tasks directly in React might slow down your application.
